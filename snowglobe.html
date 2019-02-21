@@ -1,0 +1,123 @@
+<html>
+    <head></head>
+    <style>
+        body {
+            background-color: hsla(324, 100%, 74%, 1);
+        }
+        #globe {
+            z-index: 10;
+            position:absolute;
+            top: 20%;
+            left: 30%;
+            width: 50vmin;
+            height: 50vmin;
+            background-color: hsla(324, 100%, 100%, 0.38);
+            border: 2px solid grey;
+            border-radius: 50%;
+        }
+        #horizon {
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(transparent 50%, green 50% ); 
+            border-radius: 50%
+        }
+        #mountain1 {
+            position: absolute;
+            z-index:2;
+            top: 6vmin;
+            left: 3vmin;
+            width: 0;
+	        height: 0;
+	        border-left: 10vmin solid transparent;
+	        border-right: 10vmin solid transparent;
+	        border-bottom: 20vmin solid #4f2b1c;
+        }
+        #mountain2 {
+            position: absolute;
+            z-index:2;
+            top: 6vmin;
+            left: 20vmin;
+            width: 0;
+	        height: 0;
+	        border-left: 10vmin solid transparent;
+	        border-right: 10vmin solid transparent;
+	        border-bottom: 20vmin solid #4f2b1c;
+        }
+        #mountain3 {
+            z-index: 3;
+            position: absolute;
+            top: 7vmin;
+            left: 12vmin;
+            width: 0;
+	        height: 0;
+	        border-left: 10vmin solid transparent;
+	        border-right: 10vmin solid transparent;
+	        border-bottom: 20vmin solid #623622;
+        }
+        #star {
+            position: absolute;
+            top: 2vmin;
+            left: 20vmin;
+            height: 5vmin;
+            width: 5vmin;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            background-color: yellow;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            from{transform: translateY(0);}
+            50% {transform: translateY(-10%);}
+            to{transform: translateY(0%);}
+        }
+        #log {
+            position: absolute;
+            top: 30vmin;
+            left: 20vmin;
+            height: 5vmin;
+            width: 10vmin;
+            background-image: url("https://images.pexels.com/photos/1761/wood-tree-bark-english-oak.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500");   
+        }
+        #fire {
+            position: absolute;
+            top: 30vmin;
+            left: 30vmin;
+            height: 10vmin;
+            width: 10vmin;
+            transform: drop-shadow(8px 8px 10px gray);
+            background-size: contain;
+            background-image: url("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/emojidex/85/fire_1f525.png");
+            animation: fade 5s infinite;
+            animation-delay: 2s;
+        }   
+        @keyframes fade {
+            from{opacity: .5;}
+            to{opacity: 1;}
+        }
+        #base {
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 10%;
+            border-bottom: 10vmin solid #555;
+            border-left: 15vmin solid transparent;
+            border-right: 15vmin solid transparent;
+            height: 0vmin;
+            width: 10vmin;
+            
+        }
+    </style>
+    <body>
+        <div id="globe">
+            <div id="horizon"></div>
+            <div id="mountain1"></div>
+            <div id="mountain2"></div>
+            <div id="mountain3"></div>
+            <div id="star"></div>
+            <div id="log"></div>
+            <div id="fire"></div>
+            <div id="base"></div>
+        </div>
+    
+    </body>
+</html>
